@@ -96,7 +96,7 @@
 <input type="hidden" id="img_srcs" name="img_srcs"/>
 <div id="head">
   <div id="location">
-    <p><img src="images/location01.gif" alt="" align="absmiddle" width="11" height="14"/><a href="bbssec">{BBSNAME}</a></p>
+    <p><img src="images/location01.gif" alt="" align="absmiddle" width="11" height="14"/><a href="bbssec">{BBSNAME}电子公告板系统（BBS）</a></p>
 		<p><img src="images/location03.gif" alt="" align="absmiddle" width="37" height="14" />广告管理</p>
   </div>
 </div>

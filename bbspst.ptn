@@ -54,7 +54,7 @@ function clckcntr() {
 <form name="form1" method="post" action="bbssnd" enctype='multipart/form-data'>
 <div id="head">
   <div id="location">
-<p><img src="images/location01.gif" alt="" align="absmiddle"/><a href=bbssec>{BBSNAME}</a></p>
+<p><img src="images/location01.gif" alt="" align="absmiddle"/><a href="bbssec">{BBSNAME}电子公告板系统（BBS）</a></p>
 <p><img src="images/location02.gif" alt="" align="absmiddle" /><a href=bbsboa?board={SECNUM}>{SECNAME}</a></p>
 <p><img src="images/location03.gif" alt="" align="absmiddle" /><a href=bbsdoc?board={BOARD}>{BOARDNAME}</a></p>
   </div>
