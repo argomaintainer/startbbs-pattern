@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{BBSNAME}</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style>
+  body{
+      margin-right:16px;
+  }
+</style>
+</head>
+
+<body>
+<form name="form1" method="post" action="">
+<div id="head">
+  <div id="location">
+<p><img src="images/location01.gif" alt="" align="absmiddle"/><a href=bbssec>{BBSNAME}</a></p>
+<p><img src="images/location02.gif" alt="" align="absmiddle" /><a href=bbsboa?board={SECNUM}>{SECNAME}</a></p>
+<p><img src="images/location03.gif" alt="" align="absmiddle" /><a href=bbsdoc?board={BOARD}>{BOARDNAME}</a></p>
+  </div>
+</div>
+  <table class="table" border="0" cellspacing="0" cellpadding="0">
+    <tr class="tb_head"> 
+      <td><img src="images/table_ul05.gif" width="18" height="25" /></td>
+      <td align="right"><img src="images/table_ur.gif" width="19" height="25" /></td>
+    </tr>
+    <tr> 
+      <td colspan="2"> <table width="100%" border="0" cellspacing="0" cellpadding="0" height="">
+          <tr> 
+            <td width="18"><img src="images/table-left2.gif" alt="" align="absmiddle" /></td>
+            <td class="td2" width="38">编号</td>
+            <td width="80" class="td2">开启投票者</td>
+            <td class="td2">投票主题</td>
+            <td width="46" class="td2">类别</td>
+            <td width="46" class="td2">天数</td>
+            <td width="50" align="right" class="td2"> <div style="float:left;padding-top:7px;">人数</div>
+              <img src="images/table_right2.gif" alt="" align="absmiddle" /></td>
+          </tr>
+         	<!-- BEGIN mainform -->
+          <tr> 
+            <td colspan="2" class="td5">{INDEX}</td>
+            <td class="td6">{USER}</td>
+            <td class="td6">{TITLE}</td>
+            <td class="td6">{TYPE}</td>
+            <td class="td6">{DAY}</td>
+            <td class="td7">{NUM}</td>
+          </tr>
+          <!-- END mainform -->
+          <tr> 
+            <td colspan="6" class="tb_head_left">&nbsp;</td>
+            <td class="tb_head_right">&nbsp;</td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr> 
+      <td class="tb_bottom"><img src="images/table_bl.gif" alt=""/></td>
+      <td  class="tb_bottom" align="right"><img src="images/table_br.gif" alt="" /></td>
+    </tr>
+  </table>
+
+  <div id="footer_search">
+    </div>
+</form>
+</body>
+</html>

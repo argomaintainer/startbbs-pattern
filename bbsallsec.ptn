@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中山大学逸仙时空BBS</title>
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<form name="form1" method="post" action="">
+<div id="head">
+  <div id="index_search"></div>
+</div>
+<table id="container" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="center">
+	<table border="0" cellspacing="0" cellpadding="0" id="boards">
+      <tr> 
+        <td colspan="7" class="tb_head"><img src="images/table_ul02.gif" alt="" style="float:left" class="tb_ul" /><div class="title">分类讨论区</div></td>
+        <td width="19" align="right" valign="top" class="tb_r"><img src="images/table_ur.gif" alt=""/></td>
+      </tr>
+      <tr> 
+        <td><img src="images/table-left2.gif" alt=""/></td>
+        <td width="40" class="td2">区号</td>
+        <td width="72" class="td2">类别</td>
+        <td class="td2">描述</td>
+        <td width="40" class="td2">区号</td>
+        <td width="72" class="td2">类别</td>
+        <td class="td2">描述</td>
+        <td><img src="images/table_right2.gif" alt="" /></td>
+      </tr>
+<!-- BEGIN mainform -->
+      <tr> 
+        <td class="tb_l"></td>
+        <td class="td3 border">{SECNUM1}</td>
+        <td class="td3 border"><a href=bbsboa?board={SECNUM1}>{SECNAME1}</a></td>
+        <td class="td3 border"><a href=bbsboa?board={SECNUM1}>{SECTYPE1}</a></td>
+        <td class="td3 border">{SECNUM2}</td>
+        <td class="td3 border"><a href=bbsboa?board={SECNUM2}>{SECNAME2}</a></td>
+        <td class="td3 border"><a href=bbsboa?board={SECNUM2}>{SECTYPE2}</a></td>
+            <td class="tb_r">&nbsp;</td>
+      </tr>
+<!-- END mainform -->
+      <tr class="tb_bottom"> 
+            <td colspan="7" valign="bottom"><img src="images/table_bl.gif" alt="" /></td>
+        <td align="right" class="tb_bottom"><img src="images/table_br.gif"/></td>
+      </tr>
+    </table>
+	</td>
+	
+  </tr>
+</table>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{BBSNAME}</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+  body{
+      margin-right:16px;
+  }
+</style>
+</head>
+
+<body>
+<form name="form1" method="post" action="bbssel">
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href="bbssec">{BBSNAME}</a></p>
+	<p><img src="images/location03.gif" alt="" align="absmiddle" />版面查询</p>
+  </div>
+</div>
+  <table border="0" cellpadding="0" cellspacing="0" class="table">
+    <tr> 
+      <td colspan="2" class="tb_head"><img src="images/table_ul01.gif" alt="" align="absmiddle" class="tb_ul" style="float:left" /> 
+        <div style="margin-top:8px">版面查询</div></td>
+      <td align="right" valign="top" class="tb_r"><img src="images/table_ur.gif" alt=""/></td>
+    </tr>
+    <tr> 
+      <td class="tb_l">&nbsp; </td>
+      <td><ul class="search">
+          <li>版面名称: 
+            <input type="text" name="board"/>
+          </li>
+          <li><a href="javascript:form1.submit()"><img src="images/add_search.gif" alt="提交查询" border="0"/></a></li>
+          </ul></td>
+      <td class="tb_r">&nbsp;</td>
+    </tr>
+    <tr class="tb_bottom"> 
+      <td width="10"><img src="images/table_bl.gif" alt=""/></td>
+      <td width="757"></td>
+      <td align="right"><img src="images/table_br.gif" alt=""/></td>
+    </tr>
+  </table>
+  <div id="footer"></div>
+</form>
+</body>
+</html>

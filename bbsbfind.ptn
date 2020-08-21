@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中山大学逸仙时空BBS</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+  body{
+      margin-right:16px;
+  }
+</style>
+</head>
+
+<body>
+<form name="form1" method="post" action="bbsbfind?type=1">
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href=bbssec>【{BBSNAME}】</a></p>
+	<p><img src="images/location03.gif" alt="" align="absmiddle"><font color=ff0000>【版面文章查询】</p>
+  </div>
+</div>
+  <table border="0" cellpadding="0" cellspacing="0" class="table">
+    <tr> 
+      <td colspan="2" class="tb_head"><img src="images/table_ul01.gif" alt="" align="absmiddle" class="tb_ul" style="float:left" /> 
+        <div style="margin-top:8px">版面文章查询</div></td>
+      <td align="right" valign="top" class="tb_r"><img src="images/table_ur.gif" alt=""/></td>
+    </tr>
+    <tr> 
+      <td class="tb_l">&nbsp; </td>
+      <td><ul class="search"><form action=bbsbfind?type=1 method=post>
+          <li>版面名称: 
+           <input type=text maxlength=24 size=24 name=board value='{BOARD}'>
+          </li>
+          <li>标题含有: 
+           <input type=text maxlength=50 size=20 name=title> AND <input type=text maxlength=50 size=20 name=title2>
+          </li>
+          <li>标题不含: 
+           <input type=text maxlength=50 size=20 name=title3>
+          </li>
+          <li>作者帐号: 
+           <input type=text maxlength=12 size=12 name=userid>
+          </li>
+          <li>时间范围:
+           <input type=text maxlength=4  size=4  name=dt value=7> 天以内
+          </li>
+          <li>精华文章: 
+           <input type=checkbox name=mg class="checkbox"> 不含跟贴: <input type=checkbox name=og class="checkbox">
+          </li>
+          <li> 
+            <br>&nbsp;&nbsp; <input type=submit value=递交查询结果></li></form>
+	  <br>
+	  &nbsp;<a href="http://argo.sysu.edu.cn:874/frgg/{BOARD}.html">frgg逸仙时空搜索</a><font color=ff0000> new!</font>
+          </ul></td>
+      <td class="tb_r">&nbsp;</td>
+    </tr>
+    <tr class="tb_bottom"> 
+      <td width="10"><img src="images/table_bl.gif" alt=""/></td>
+      <td width="757"></td>
+      <td align="right"><img src="images/table_br.gif" alt=""/></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

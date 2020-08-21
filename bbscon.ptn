@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>{TITLE} - 逸仙时空BBS</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css">
+<style>
+  body{
+      margin-right:16px;
+  }
+</style>
+</head>
+
+<body>
+<form name="form1" method="post" action="bbscon">
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href=bbssec>{BBSNAME}</a></p>
+    <p><img src="images/location02.gif" alt="" align="absmiddle"><a href=bbsboa?board={SECNUM}>{SECNAME}</a></p>
+	<p><img src="images/location03.gif" alt="" align="absmiddle"><a href=bbsdoc?board={BOARD}>{BOARDNAME}</p>
+  </div>
+</div>
+  <div id="post_reply"><a href=bbspst?board={BOARD}><img src="images/add_topic2.gif" alt="撰写话题" width="72" height="24" border="0"></a><A href=bbspst?board={BOARD}&file={FILE}&userid={AUTHOR}><img src="images/add_reply.gif" alt="回复帖子"/ border="0"></a> 
+  </div>
+
+  <table border="0" cellpadding="0" cellspacing="0" class="table">
+    <tr> 
+      <td colspan="2" class="tb_head"><img src="images/table_ul05.gif" alt="" align="absmiddle" style="float:left; margin-left:0!important;margin-left:-3px;"/> 
+        <div class="title"><img src="images/li01.gif" width="9" height="9" align="absmiddle"> 
+          <B>主题</B>：{TITLE}
+        </div>
+      </td>
+      <td align="right" class="tb_head"><img src="images/table_ur.gif" alt=""/></td>
+    </tr>
+    <tr> 
+      <td class="tb_l">&nbsp;</td>
+      <td class="border"> <ul class="head2">
+          <li><a href=bbsfwd?board={BOARD}&file={FILE}><img src="images/email.gif" alt="" align="absmiddle" border="0"> 转寄/推荐</a></li>
+          <li><a href=bbsccc?board={BOARD}&file={FILE}><img src="images/quote.gif" alt="" align="absmiddle" border="0"> 转贴</a></li>
+          <li><a onclick='return confirm("删除的文章将无法恢复，你真的要删除本文吗?")' href=bbsdel?board={BOARD}&file={FILE}><img src="images/del.gif" alt="" align="absmiddle" border="0">删除文章</a></li>
+          <li><a href=bbsedit?board={BOARD}&file={FILE}><img src="images/edit.gif" alt="" align="absmiddle" border="0">修改文章</a></li>
+          <li><a href=bbspst?board={BOARD}&file={FILE}&userid={AUTHOR}><img src="images/reply.gif" alt="" align="absmiddle" border="0">回复文章</a></li>
+          <li><img src="images/message.gif" alt="" align="absmiddle"><a href=bbstcon?board={BOARD}&file={FILE} border="0"><font style='color:#f00000'>同主题阅读</font></a></li>
+        </ul></td>
+      <td class="tb_r">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="tb_l">&nbsp;</td>
+      <td class="border content2">
+	<pre>
+	<BLOCKQUOTE>
+	  <!-- SHOWFILE ARTICLE -->
+	</BLOCKQUOTE>
+	</pre>
+      </td>
+      <td class="tb_r">&nbsp;</td>
+    </tr>
+    <tr class="tb_bottom"> 
+      <td><img src="images/table_bl.gif" alt=""/></td>
+      <td align="right"><img src="images/table_br.gif" alt=""/></td>
+    </tr>
+  </table>
+  <div id="footer">
+    <p>
+	{PGBUTTONUP} {PGBUTTONDN} &nbsp;&nbsp;
+    </p>
+  </div>
+</form>
+</body>
+</html>

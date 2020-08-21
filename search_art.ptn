@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="gb2312"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{BBSNAME}</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+  body{
+      margin-right:16px;
+  }
+</style>
+</head>
+
+<body>
+<form name="form1" method="post" action="bbsfind">
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href="bbssec">{BBSNAME}</a></p>
+		<p><img src="images/location03.gif" alt="" align="absmiddle"/>文章查询</p>
+  </div>
+</div>
+  <table border="0" cellpadding="0" cellspacing="0" class="table">
+    <tr> 
+      <td colspan="2" class="tb_head"><img src="images/table_ul01.gif" alt="" align="absmiddle" class="tb_ul" style="float:left" /> 
+        <div style="margin-top:8px">文章查询</div></td>
+      <td align="right" valign="top" class="tb_r"><img src="images/table_ur.gif" alt=""/></td>
+    </tr>
+    <tr> 
+      <td class="tb_l"> </td>
+      <td><ul class="search">
+<li>文章作者: <input maxlength="12" size="12" type="text" name="user"/> (不填查找所有作者)</li>
+<li>标题含有: <input maxlength="60" size="20" type="text" name="title"/> AND <input maxlength="60" size="20" type="text" name="title2"/></li>
+<li>标题不含: <input maxlength="60" size="20" type="text" name="title3"/></li>
+<li>查找最近: <input maxlength="5" size="5" type="text" name="day" value="7"/> 天以内的文章</li>
+          <li>
+          <a href="javascript:form1.submit()"><img src="images/add_search.gif" alt="提交查询" border="0"/></a>
+          </li>
+          </ul></td>
+      <td class="tb_r"> </td>
+    </tr>
+    <tr class="tb_bottom"> 
+      <td width="10"><img src="images/table_bl.gif" alt=""/></td>
+      <td width="757"></td>
+      <td align="right"><img src="images/table_br.gif" alt=""/></td>
+    </tr>
+  </table>
+  <div id="footer"></div>
+</form>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>

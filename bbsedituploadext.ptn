@@ -1,0 +1,9 @@
+<html>
+<form action=bbsmoduploadext method=post>
+<textarea name=source rows=20 cols=80 wrap=physicle>
+<!-- SHOWFILE FILENAME -->
+</textarea><br>
+<input type=hidden name=board value={BOARD}>
+<input type=submit value=ÐÞ¸Ä>
+</form>
+</html>

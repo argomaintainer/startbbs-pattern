@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{BBSNAME}</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+  body{
+      margin-right:16px;
+  }
+</style>
+</head>
+
+<body>
+<form method="get" action="http://www.google.com/custom">
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href="bbssec">{BBSNAME}</a></p>
+    <p><img src="images/location03.gif" alt="" align="absmiddle"/>精华区搜索</p>
+  </div>
+</div>
+  <table border="0" cellpadding="0" cellspacing="0" class="table">
+    <tr> 
+      <td colspan="2" class="tb_head"><img src="images/table_ul01.gif" alt="" align="absmiddle" class="tb_ul" style="float:left" /> 
+        <div style="margin-top:8px">精华区搜索</div></td>
+      <td width="19" align="right" valign="top" class="tb_r"><img src="images/table_ur.gif" alt=""/></td>
+    </tr>
+    <tr> 
+      <td class="tb_l"> </td>
+      <td><ul class="search">
+          <li>文章关键字: 
+            <input type="text" name="q" size="31" maxlength="255" value=""/>　<input type="submit" name="btnG" value="Google 搜索"/></li>
+          </ul></td>
+      <td class="tb_r"> </td>
+    </tr>
+    <tr class="tb_bottom"> 
+      <td width="25"><img src="images/table_bl.gif" alt=""/></td>
+      <td width="1063"></td>
+      <td align="right"><img src="images/table_br.gif" alt=""/></td>
+    </tr>
+  </table>
+  <div id="footer"></div>
+<input type="hidden" name="domains" value="bbs.sysu.edu.cn"/>
+<input type="hidden" name="sitesearch" value="bbs.sysu.edu.cn"/>
+<input type="hidden" name="client" value="pub-8233758849727546"/>
+<input type="hidden" name="forid" value="1"/>
+<input type="hidden" name="ie" value="GB2312"/>
+<input type="hidden" name="oe" value="GB2312"/>
+<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1;"/>
+<input type="hidden" name="hl" value="zh-CN"/>
+</form>
+</body>
+</html>

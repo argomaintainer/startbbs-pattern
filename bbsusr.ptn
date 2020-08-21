@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中山大学逸仙时空BBS</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style>
+  body{
+      margin-right:16px;
+  }
+</style>
+</head>
+
+<body>
+<form name="form1" method="post" action="">
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle"/>【{BBSNAME}】</p>
+    <p><img src="images/location03.gif" alt="" align="absmiddle" /><font color=ff0000>【在线用户列表】</font>
+</p>
+  </div>
+</div>
+
+  <table class="table" border="0" cellspacing="0" cellpadding="0">
+    <tr class="tb_head"> 
+      <td><img src="images/table_ul05.gif" width="18" height="25" /></td>
+      <td align="right"><img src="images/table_ur.gif" width="19" height="25" /></td>
+    </tr>
+    <tr> 
+      <td colspan="2"> <table width="100%" border="0" cellspacing="0" cellpadding="0" height="">
+          <tr> 
+            <td width="18"><img src="images/table-left2.gif" alt="" align="absmiddle" /></td>
+            <td class="td2" width="38">序号</td>
+            <td class="td2" width="33">好友</td>
+            <td width="110" class="td2">使用者代号</td>
+            <td width="30%" class="td2">使用者昵称</td>
+            <td class="td2">来自</td>
+            <td class="td2">目前动态</td>
+            <td align="right" class="td2"> <div style="float:left;padding:7px 0 0 0;">发呆</div>
+            <img src="images/table_right2.gif" alt="" align="absmiddle" /></td>
+          </tr>
+
+<!-- BEGIN mainform -->
+          <tr> 
+            <td colspan="2" class="td5">{INDEX}</td>
+            <td align="center" class="td6">{FRIENDFLAG}</td>
+            <td class="td6"><a href=bbsqry?userid={ID}>{ID}</a></td>
+            <td class="td6"><a href=bbsqry?userid={ID}>{NICK}</a></td>
+            <td class="td6">{IP}</td>
+            <td class="td6">{ACTION}</td>
+            <td class="td7">{DELAY}</td>
+          </tr>
+<!-- END mainform -->
+
+		  <tr>
+		    <td colspan="4" align="right" class="tb_head_left">&nbsp;</td>
+				<td height="40" colspan="4" align="right" class="tb_head_right"><span style="letter-spacing:0.3em;">
+<a href=bbsufind?search=A>A</a>
+<a href=bbsufind?search=B>B</a>
+<a href=bbsufind?search=C>C</a>
+<a href=bbsufind?search=D>D</a>
+<a href=bbsufind?search=E>E</a>
+<a href=bbsufind?search=F>F</a>
+<a href=bbsufind?search=G>G</a>
+<a href=bbsufind?search=H>H</a>
+<a href=bbsufind?search=I>I</a>
+<a href=bbsufind?search=J>J</a>
+<a href=bbsufind?search=K>K</a>
+<a href=bbsufind?search=L>L</a>
+<a href=bbsufind?search=M>M</a>
+<a href=bbsufind?search=N>N</a>
+<a href=bbsufind?search=O>O</a>
+<a href=bbsufind?search=P>P</a>
+<a href=bbsufind?search=Q>Q</a>
+<a href=bbsufind?search=R>R</a>
+<a href=bbsufind?search=S>S</a>
+<a href=bbsufind?search=T>T</a>
+<a href=bbsufind?search=U>U</a>
+<a href=bbsufind?search=V>V</a>
+<a href=bbsufind?search=W>W</a>
+<a href=bbsufind?search=X>X</a>
+<a href=bbsufind?search=Y>Y</a>
+<a href=bbsufind?search=Z>Z</a>
+|</span> <a href='bbsufind?search=*'>全部</a> 
+| <a href=bbsfriend>在线好友</a> </td>
+	      </tr>
+        </table></td>
+    </tr>
+    <tr> 
+      <td class="tb_bottom"><img src="images/table_bl.gif" alt=""/></td>
+      <td  class="tb_bottom" align="right"><img src="images/table_br.gif" alt="" /></td>
+    </tr>
+  </table>
+
+  <div id="footer"> 
+    <p>
+    {PGBUTTONUP}
+		{PGBUTTONDN}
+    转到第 
+      <input name="start" type="text" align="absmiddle" />
+      <input name="board" type="hidden" value="{BOARD}" />
+      项
+      <input name="Submit" type="submit" class="button" value="GO" />
+    </p>
+    <ul>
+      <li>页次: <b>{PAGE}</b>/<b>{PGTOTAL}</b>页</li>
+      <li>每页: <b>{PERPAGE}</b> </li>
+      <li>总数: <b>{TOTAL}</b> </li>
+    </ul>
+  </div>
+</form>
+</body>
+</html>

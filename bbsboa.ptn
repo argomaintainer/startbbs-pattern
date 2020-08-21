@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中山大学逸仙时空BBS</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style>
+  body{
+      margin-right:16px;
+  }
+</style>
+</head>
+
+<body>
+<form name="form1" method="post" action="">
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle" width="11" height="14"/><a href=bbssec>{BBSNAME}</a></p>
+    <p><img src="images/location03.gif" alt="" align="absmiddle" width="37" height="14"/><a href=bbsboa?board={SECNUM}>{SECNAME}</a></p>
+  </div>
+</div>
+  <table class="table" border="0" cellspacing="0" cellpadding="0">
+    <tr class="tb_head"> 
+      <td><img src="images/table_ul05.gif" width="18" height="25" /></td>
+      <td align="right"><img src="images/table_ur.gif" width="19" height="25" /></td>
+    </tr>
+    <tr> 
+      <td colspan="2"> <table width="100%" border="0" cellspacing="0" cellpadding="0" height="">
+          <tr> 
+            <td width="18"><img src="images/table-left2.gif" alt="" align="absmiddle" /></td>
+            <td class="td2" width="28" align="left">状态</td>
+            <td class="td2" width="48" align="center">文章数</td>
+            <td width="75" class="td2" align="center">类别</td>
+            <td class="td2">讨论区名称</td>
+            <td class="td2">中文描述</td>
+            <td class="td2">版主</td>
+            <td width="92" class="td2">最后更新</td>
+            <td width="50" align="right" class="td2"> <div style="float:left;padding-top:7px;">操作</div>
+              <img src="images/table_right2.gif" alt="" align="absmiddle" /></td>
+          </tr>
+<!-- BEGIN mainform -->
+          <tr> 
+            <td class="tb_head_left td8">&nbsp;</td>
+			<td  class="td8">{READFLAG}&nbsp;{VOTEFLAG}</td>
+            <td  class="td6" align="center">{POSTNUM}</td>
+            <td align="center" class="td6">{TYPE}</td>
+            <td class="td6 hightlight"><a href={METHOD}?board={BOARD}>{BOARD}</a></td>
+            <td class="td6"><a href={METHOD}?board={BOARD}>{BOARDNAME}</a></td>
+            <td class="td6">{BM}</td>
+            <td class="td6">{DATE}</td>
+            <td class="td7"><a href=bbsbrdadd?board={BOARD}>预定</a></td>
+          </tr>
+<!-- END mainform -->
+          <tr> 
+            <td height="10" class="tb_head_left">&nbsp;</td>
+            <td height="10" colspan="8" class="tb_head_right"></td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr> 
+      <td class="tb_bottom"><img src="images/table_bl.gif" alt=""/></td>
+      <td  class="tb_bottom" align="right"><img src="images/table_br.gif" alt="" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

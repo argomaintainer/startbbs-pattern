@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{BBSNAME}</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+  body{
+      margin-right:16px;
+  }
+</style>
+</head>
+
+<body>
+<form name="form1" method="post" action="bbspwd?type=1">
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href="bbssec">{BBSNAME}</a></p>
+		<p><img src="images/location03.gif" alt="" align="absmiddle"/>修改密码</p>
+  </div>
+</div>
+  <table border="0" cellpadding="0" cellspacing="0" class="table">
+    <tr> 
+      <td colspan="2" class="tb_head"><img src="images/table_ul06.gif" alt="" width="37" height="25" align="absmiddle" class="tb_ul" style="float:left" /> 
+      <div style="margin-top:8px">{USER} -- 修改密码</div></td>
+      <td align="right" valign="top" class="tb_r"><img src="images/table_ur.gif" alt=""/></td>
+    </tr>
+    <tr> 
+      <td class="tb_l">  </td>
+      <td><ul class="search">
+          <li>输入旧密码: 
+            <input type="password" name="pw1"/>
+          </li>
+          <li>输入新密码: 
+            <input type="password" name="pw2"/>
+          </li>
+          <li>请重复输入: 
+            <input type="password" name="pw3"/>
+          </li>
+          <li><input class="confirm" type="image" src="images/confirm.gif" alt="确认" width="54" height="24"/></li>
+        </ul></td>
+      <td class="tb_r"> </td>
+    </tr>
+    <tr class="tb_bottom"> 
+      <td width="10"><img src="images/table_bl.gif" alt=""/></td>
+      <td width="757"></td>
+      <td align="right"><img src="images/table_br.gif" alt=""/></td>
+    </tr>
+  </table>
+  <div id="footer"></div>
+</form>
+</body>
+</html>

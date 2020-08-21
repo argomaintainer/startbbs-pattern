@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中山大学逸仙时空BBS</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+  body{
+      margin-right:16px;
+  }
+  a.a1:link{
+      color:#0000FF;
+      text-decoration:underline;
+  }
+  a.a1:visited{
+      color:#0000FF;
+      text-decoration:underline;
+  }
+</style>
+<script language="JavaScript1.2">
+clckcnt = 0;
+ie = (document.all)? true:false
+if (ie) {
+function ctlent(eventobject) {
+  if (event.ctrlKey && window.event.keyCode == 88) {
+    if (clckcntr()) this.document.form1.submit();
+  }
+}
+}
+function clckcntr() {
+  <!-- IF NOLOGIN -->
+  if ('' == FORM.pw.value) {
+    FORM.pw.focus();
+    return false;
+  }
+  if ('' == FORM.id.value) {
+    FORM.id.focus();
+    return false;
+  }
+  <!-- ENDIF -->
+  clckcnt++;
+  if (clckcnt > 1) {
+    if (clckcnt == 2) {
+      alert('贴子已经发出了......\n\n' + '请等待片刻......\n\n' + '不要重复按提交键，谢谢！');
+    }
+    return false;
+  }
+  return true;
+}
+</script>
+</head>
+
+<body>
+<form name="form1" method="post" action="bbssnd" enctype='multipart/form-data'>
+<div id="head">
+  <div id="location">
+<p><img src="images/location01.gif" alt="" align="absmiddle"/><a href=bbssec>{BBSNAME}</a></p>
+<p><img src="images/location02.gif" alt="" align="absmiddle" /><a href=bbsboa?board={SECNUM}>{SECNAME}</a></p>
+<p><img src="images/location03.gif" alt="" align="absmiddle" /><a href=bbsdoc?board={BOARD}>{BOARDNAME}</a></p>
+  </div>
+</div>
+  <table border="0" cellpadding="0" cellspacing="0" class="table">
+    <tr> 
+      <td colspan="2" class="tb_head"><img src="images/table_ul06.gif" alt="" align="absmiddle" class="tb_ul" style="float:left" /> 
+        <div style="margin-top:8px">发表文章</div> </td>
+      <td align="right" valign="top" class="tb_head"><img src="images/table_ur.gif" alt=""/></td>
+    </tr>
+    <tr> 
+      <td width="196" height="29" class="td4">文章标题:</td>
+      <td colspan="2" class="td7"><input name="title" value="{TITLE}" type="text" style="width:55%" maxlength="40" />
+        <span class="notes">*不能超过40个汉字 </span></td>
+    </tr>
+
+	  <!-- IF NOLOGIN -->
+          <tr>
+            <td width="196" height="29" class="td4"><b>你的用户名</b>：</td>
+            <td colspan=2 class="td7">
+               <input maxlength=12 size=25 name=id>
+            </td>
+          </tr>
+          <tr>
+            <td width="196" height="29" class="td4"><b>你的密码：</b>
+              <a href="bbsanc?path=boards/BBS_Help/D.1044598917.A/D.1044598912.A/D.1044598913.A/M.1040447216.A" 
+		target=_blank>忘了密码?</a></td>
+            <td colspan=2 class="td7">
+              <input maxlength=40 size=25 name=pw type=password>
+            </td>
+          </tr>
+	  <!-- ENDIF -->
+
+    <tr> 
+      <td class="td4"> <ul class="post_content">
+          <li>文章内容:</li>
+          <li class="notes">* 发文时应慎重考虑文章内容是否适合公开场合发表，请勿肆意灌水，<a class="a1" target="_blank" href="http://argo.sysu.edu.cn/bbscon?board=BoardManagement&file=M.1240673128.A">相同内容文章请勿多于四篇</a>。谢谢您的合作。</li>
+          <li>签名档:<br />
+            <input name="usesignature" type="checkbox" class="checkbox" value="Y" checked="1" />
+            使用签名档  [<a href=bbssig>查看</a>]<br />
+            <input type="radio" name="randomsig" value="0" class="checkbox" />
+            使用第 
+            <input type="text" name="signature" size="2" maxlength="2" style="width:25px; height:13px; font-size:10px" />
+            个签名档<br />
+            <input type="radio" name="randomsig" value="1" checked="1" class="checkbox"  />
+            使用乱数签名档 </li>
+          <li>转信: 
+            <input type=radio name=exchange value='Y' class="checkbox">
+            是 
+            <input type=radio name=exchange value='N' checked="1" class="checkbox"/>
+            否</li>
+          <li>不可回复: 
+            <input type=radio name=noreply value='Y' class="checkbox"/>
+          是
+          <input type=radio name=noreply value='N' checked="1" class="checkbox"  /> 
+          否 </li>
+      </ul>      </td>
+      <td colspan="2" class="td7">
+<textarea onkeydown=ctlent() name=text  style="width:75%; height:205px">{CONTENT}</textarea> <span class="notes"> 
+        <br>*按ctrl+X快速提交</span>
+   <!-- IF ANONYBOARD -->
+	       &nbsp&nbsp<input type=checkbox name=anonymous value='Y' checked="1" class="checkbox">匿名
+   <!-- ENDIF -->
+</td>
+    </tr>
+
+<!-- IF UPLOADATTACH -->
+    <tr>
+      <td height="30" class="td4">附件上传:</td>
+      <td colspan="2" class="td7"><input type="file" name="attach"> 
+      <span class="notes">* 有效文件类型:jpg gif zip txt  , 文件大小不要超过 1024 k</span></td>
+    </tr>
+<!-- ENDIF -->
+    <tr> 
+      <td height="50" class="tb_head_left">&nbsp;</td>
+      <td colspan="2" class="tb_head_right">
+<input type="image" src="images/post.gif" alt="发表" hspace="2px" class="confirm" /></a> 
+              <input type=hidden value="{TITLE}" name=oldtitle>
+	      <input type=hidden value='{BOARD}' name=board>
+	      <input type=hidden value='{ARTICLEID}' name=articleid>
+              <!-- IF REPLY -->
+              <input type=hidden value='{REFILE}' name=refile>
+              <!-- ENDIF -->
+	      <input type=hidden value=1 name=noinit>
+	      <input type=hidden value=1 name=quick>
+<a href="javascript:form1.reset()"><img src="images/clear.gif" alt="重填" border=0/></a></td>
+    </tr>
+    <tr class="tb_bottom"> 
+      <td><img src="images/table_bl.gif" alt=""/></td>
+      <td width="563"></td>
+      <td align="right"><img src="images/table_br.gif" alt=""/></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

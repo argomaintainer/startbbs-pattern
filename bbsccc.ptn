@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{BBSNAME}</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+  body{
+      margin-right:16px;
+  }
+</style>
+</head>
+
+<body>
+<form name="form1" method="post" action="bbsccc">
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href="bbssec">{BBSNAME}</a></p>
+		<p><img src="images/location03.gif" alt="" align="absmiddle" />www个人定制</p>
+  </div>
+</div>
+  <table border="0" cellpadding="0" cellspacing="0" class="table">
+    <tr> 
+      <td colspan="2" class="tb_head"><img src="images/table_ul06.gif" alt="" align="absmiddle" class="tb_ul" style="float:left" /> 
+        <div style="margin-top:8px">转载文章</div> </td>
+      <td align="right" valign="top" class="tb_r"><img src="images/table_ur.gif" alt=""/></td>
+    </tr>
+    <tr> 
+      <td height="29" class="td4">文章标题:</td>
+      <td colspan="2" class="td7">{TITLE}</td>
+    </tr>
+    <tr>
+      <td height="29" class="td4">文章作者:</td>
+      <td colspan="2" class="td7">{OWNER}</td>
+    </tr>
+    <tr>
+      <td height="29" class="td4">原讨论区:</td>
+      <td colspan="2" class="td7">{BOARD}</td>
+    </tr>
+    <tr>
+      <td height="29" class="td4">将文章转载到:</td>
+      <td colspan="2" class="td7">
+      <input type="text" name="target" />讨论区</td>
+    </tr>
+    <tr> 
+      <td height="50" class="tb_head_left"> </td>
+      <td colspan="2" class="tb_head_right">
+			<input type="hidden" name="board" value="{BOARD}"/>
+			<input type="hidden" name="file" value="{FILE}"/>
+      <a href="javascript:form1.submit()"><img src="images/submit_zz.gif" alt="确认转载" width="72" height="24" hspace="2px" border="0"/></a>
+      </td>
+    </tr>
+    <tr class="tb_bottom"> 
+      <td><img src="images/table_bl.gif" alt=""/></td>
+      <td width="563"></td>
+      <td align="right"><img src="images/table_br.gif" alt=""/></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中山大学逸仙时空BBS</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+  body{
+      margin-right:16px;
+  }
+</style>
+<script language="JavaScript1.2">
+clckcnt = 0;
+ie = (document.all)? true:false
+if (ie) {
+function ctlent(eventobject) {
+  if (event.ctrlKey && window.event.keyCode == 88) {
+    if (clckcntr()) this.document.form1.submit();
+  }
+}
+}
+function clckcntr() {
+  clckcnt++;
+  if (clckcnt > 1) {
+    if (clckcnt == 2) {
+      alert('信件已经发出了......\n\n' + '请等待片刻......\n\n' + '不要重复按提交键，谢谢！');
+    }
+    return false;
+  }
+  return true;
+}
+
+</script>
+</head>
+
+<body>
+<form name="form1" method="post" action="bbssndmail">
+<input type="hidden" name="filenum" value="{FILENUM}">
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href=bbssec>【{BBSNAME}】</a></p>
+    <p><img src="images/location02.gif" alt="" align="absmiddle" /><a href=bbsmail>【我的邮箱】</a></p>
+	<p><img src="images/location03.gif" alt="" align="absmiddle" /><font color=ff0000>【寄语信鸽】</font></p>
+  </div>
+</div>
+  <table border="0" cellpadding="0" cellspacing="0" class="table">
+    <tr> 
+      <td colspan="2" class="tb_head"><img src="images/table_ul06.gif" alt="" align="absmiddle" class="tb_ul" style="float:left" /> 
+        <div style="margin-top:8px">寄语信鸽</div> </td>
+      <td align="right" valign="top" class="tb_head"><img src="images/table_ur.gif" alt=""/></td>
+    </tr>
+    <tr> 
+      <td width="196" height="29" class="td4">信件标题:</td>
+      <td colspan="2" class="td7"><input name="title" value='{TITLE}' type="text" style="width:55%" maxlength="40" />
+        <span class="notes">*不能超过40个汉字 </span></td>
+    </tr>
+
+
+          <tr>
+            <td width="196" height="29" class="td4">收信人：</td>
+            <td colspan=2 class="td7">
+              <input maxlength=12 size=25 name=userid value='{USERID}'>
+            </td>
+          </tr>
+  
+
+    <tr> 
+      <td class="td4"> <ul class="post_content">
+          <li>文章内容:</li>
+          <li class="notes">* 发文时应慎重考虑文章内容是否适合公开场合发表，请勿肆意灌水。谢谢您的合作。</li>
+          <li>签名档:<br />
+            <input name=usesignature type="checkbox" class="checkbox" value="Y" checked />
+            使用签名档  [<a href=bbssig>查看</a>]<br />
+            <input type=radio name=randomsig value=0 class="checkbox" />
+            使用第 
+            <input type=text name=signature size=2 maxlength=2 style="width:25px; height:13px; font-size:10px" />
+            个签名档<br />
+            <input type=radio name=randomsig value=1 checked class="checkbox"  />
+            使用乱数签名档 </li>
+          <li>备份: 
+		<input type=radio name=backup value=1 class="checkbox">是
+		<input type=radio name=backup value=0 checked class="checkbox">否</li>
+      </ul>      </td>
+      <td colspan="2" class="td7">
+<textarea onkeydown=ctlent() name=text  style="width:75%; height:205px">{CONTENT}</textarea> <span class="notes"> 
+        <br>*快速发信:请按ctrl+X快速提交</span>
+</td>
+    </tr>
+
+    <tr> 
+      <td height="50" class="tb_head_left">&nbsp;</td>
+      <td colspan="2" class="tb_head_right">
+<a href="javascript:form1.submit()"><img src="images/post.gif" alt="发表" hspace="2px" border=0 /></a> 
+              &nbsp;&nbsp; 
+              <input type=hidden value='{TITLE}' name=oldtitle>
+<a href="javascript:form1.reset()"><img src="images/clear.gif" alt="重填" border=0/></a></td>
+    </tr>
+    <tr class="tb_bottom"> 
+      <td><img src="images/table_bl.gif" alt=""/></td>
+      <td width="563"></td>
+      <td align="right"><img src="images/table_br.gif" alt=""/></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>中山大学逸仙时空BBS</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css">
+<style>
+  body{
+      margin-right:16px;
+  }
+</style>
+</head>
+
+<body>
+<form name="form1" method="post" action="bbsgcon">
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href=bbssec>{BBSNAME}</a></p>
+    <p><img src="images/location02.gif" alt="" align="absmiddle"><a href=bbsboa?board={SECNUM}>{SECNAME}</a></p>
+	<p><img src="images/location03.gif" alt="" align="absmiddle"><a href=bbsdoc?board={BOARD}>{BOARDNAME}</p>
+  </div>
+</div>
+  <div id="post_reply"><a href=bbspst?board={BOARD}><img src="images/add_topic2.gif" alt="撰写话题" width="72" height="24" border="0"></a><A href=bbspst?board={BOARD}&file={FILE}&userid={AUTHOR}><img src="images/add_reply.gif" alt="回复帖子"/ border="0"></a> 
+  </div>
+
+  <table border="0" cellpadding="0" cellspacing="0" class="table">
+    <tr> 
+      <td colspan="2" class="tb_head"><img src="images/table_ul05.gif" alt="" align="absmiddle" style="float:left; margin-left:0!important;margin-left:-3px;"/> 
+        <div class="title"><img src="images/li01.gif" width="9" height="9" align="absmiddle"> 
+          <B>主题</B>：{TITLE}</div></td>
+      <td align="right" class="tb_head"><img src="images/table_ur.gif" alt=""/></td>
+    </tr>
+    <tr> 
+      <td class="tb_l">&nbsp;</td>
+      <td class="border"> </td>
+      <td class="tb_r">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="tb_l">&nbsp;</td>
+      <td class="border content2">
+	<BLOCKQUOTE><pre>
+	  <!-- SHOWFILE ARTICLE -->
+	</BLOCKQUOTE></pre></td>
+      <td class="tb_r">&nbsp;</td>
+    </tr>
+    <tr class="tb_bottom"> 
+      <td><img src="images/table_bl.gif" alt=""/></td>
+      <td></td>
+      <td align="right"><img src="images/table_br.gif" alt=""/></td>
+    </tr>
+  </table>
+  
+  <div id="footer"> 
+{PGBUTTONUP}
+{PGBUTTONDN}
+转到第 
+      <input name="start" type="text" align="absmiddle" />
+<input name="board" type="hidden" value="{BOARD}">
+      项
+      <input name="Submit" type="submit" class="button" value="GO" />
+    </p>
+    <ul>
+      <li>总共<b>{TOTAL}</b> 篇，目前阅读到第 <b>{START}</b> 篇</li>
+    </ul>
+  </div>
+</form>
+</body>
+</html>

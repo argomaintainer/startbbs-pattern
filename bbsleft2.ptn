@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{BBSNAME}</title>
+<link href="templates/toolbar.css" rel="stylesheet" type="text/css" />
+<style>
+</style>
+<script>
+function closebut(x, y) 
+{	if(document.img0) document.img0.src='images/folder.gif';
+	if(document.img1) document.img1.src='images/folder.gif';
+	if(document.img2) document.img2.src='images/folder.gif';	
+	if(document.img3) document.img3.src='images/folder.gif';	
+	if(document.img4) document.img4.src='images/folder.gif';	
+	if(document.img5) document.img5.src='images/folder.gif';
+	if(document.getElementById('div0')) document.getElementById('div0').style.display='none';
+	if(document.getElementById('div1')) document.getElementById('div1').style.display='none';
+	if(document.getElementById('div2')) document.getElementById('div2').style.display='none';
+	if(document.getElementById('div3')) document.getElementById('div3').style.display='none';
+	if(document.getElementById('div4')) document.getElementById('div4').style.display='none';
+	if(document.getElementById('div5')) document.getElementById('div5').style.display='none';	
+	x.style.display='block';	
+	y.src='images/folder2.gif';
+	}
+function t(x, y)
+ {	if(x.style.display!='none') 
+   { x.style.display='none';		
+     y.src='images/folder.gif';	
+    }	
+   else	 closebut(x, y);
+ }
+ 
+ function openchat() 
+ {	url='bbschat';
+    chatWidth=screen.availWidth;	
+	chatHeight=screen.availHeight;	
+	winPara='toolbar=no,location=no,status=no,menubar=no,scrollbars=auto,resizable=yes,left=0,top=0,'+'width='+(chatWidth-10)+',height='+(chatHeight-27);	
+	window.open(url,'_blank',winPara);
+  }
+</script>
+</head>
+
+<body>
+<h1 id="h1_toolbar">BBS工具栏</h1>
+<div id="login">
+	<div id="login_box">
+        <form name="form2" method="post" action="bbslogin">
+        <p>用户: <input type="text" name="id" maxlength="16" size="8"/></p>
+        <p>密码: <input type="password" name="pw" maxlength="40" size="8"/></p>
+        <p><input class="confirm" type="image" src="images/login.gif" align="absmiddle"/>
+		<input name="quick" type="hidden" value="1"></p>
+        </form>
+	</div>
+</div>
+
+<div id="list"> 
+  <p><img src="images/tb01.gif" align="absmiddle" /><a target="f3" href="bbsall">全部讨论区</a></p>
+  <p><img src="images/tb02.gif" align="absmiddle" /><a target="f3" href="bbs0an">精华公布栏</a></p>
+  <p><img src="images/tb03.gif" align="absmiddle" /><a target="f3" href="bbs0an?path=/personal">个人文集区</a></p>
+  <p><img src="images/tb04.gif" align="absmiddle" /><a target="f3" href="bbstop10">今日十大</a></p>
+  <p><img src="images/tb05.gif" align="absmiddle" /><a target="f3" href="bbstopb10">热门讨论区</a></p>
+  <p><img src="images/tb05.gif" align="absmiddle" /><a target="f3" href="bbsgood">推荐版面</a></p>
+  <p><img src="images/folder.gif" align="absmiddle" name="img1" /><a href='javascript: t(document.getElementById("div1"), document.img1)'>分类讨论区</a>
+  </p>
+  <div id="div1" style="display:none">
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=0">BBS系统</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=1">校园社团</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=2">院系交流</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=3">电脑科技</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=4">休闲娱乐</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=5">文化艺术</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=6">学术科学</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=7">谈天说地</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=8">社会信息</a></p>
+  <p><img src="images/folder_end.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=9">体育健身</a></p></div> <p></p>
+    
+  <p><img src="images/folder.gif" align="absmiddle" name="img5"/><a href='javascript: t(document.getElementById("div5"), document.img5)'>特别服务区</a></p>
+  <div id="div5" style="display:none">
+  	<p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a href="bbsalluser" target="f3">所有使用者</a></p>
+  	<p><img src="images/folder_end.gif" align="absmiddle" /><a href="bbsnotepad"  target="f3">查看留言版</a></p>
+  </div>
+  <p></p>
+  <p><img src="images/tb06.gif" align="absmiddle" /><a href="http://argo.sysu.edu.cn:874/frgg/" target="f3">文章查询</a></p>
+  <p><img src="images/tb06.gif" align="absmiddle" /><a href="bbssel" target="f3">查找讨论区</a></p>
+  <p><img src="images/tb06.gif" align="absmiddle" /><a href="bbsannsearch" target="f3">精华区搜索</a></p>
+  <p><img src="images/tb07.gif" align="absmiddle" /><a href="telnet://bbs.sysu.edu.cn/">Telnet登录</a></p>
+<p><img src="images/tb07.gif" align="absmiddle" /><a target="_blank" href="bbsreg">新用户注册</a></p>  
+<p><img src="images/tb08.gif" align="absmiddle" /><a href="bbsgohome" target="_top">返回首页</a></p>
+<!--
+<br/>
+<br/>
+<p>赞助商链接:</p>
+<p>&nbsp;&nbsp;<font size="-1"><a href="ad/sina2.htm" target="_blank">新浪hi 80>一代</a></font></p>
+-->
+</div>
+</body>
+</html>

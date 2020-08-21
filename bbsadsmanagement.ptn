@@ -1,0 +1,124 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{BBSNAME}</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style>
+  body{
+      margin-right:16px;
+  }
+</style>
+<script type="text/javascript" lang="javascript">
+  var MAX_ADS = 10;
+  function Ads(href, img_src) {
+    this.href = href;
+    this.img_src = img_src;
+  }
+  var ads = Array();
+  var cnt = 0;
+  <!-- BEGIN ads -->
+  ads[cnt++] = new Ads('{HREF}', '{IMG_SRC}');
+  <!-- END ads -->
+  function shift(pos, delta) {
+    var pos2 = pos + delta;
+    if (pos2 >= 0 && pos2 < cnt) {
+      var t = ads[pos];
+      ads[pos] = ads[pos2];
+      ads[pos2] = t;
+      showAds();
+    }
+  }
+  function del(pos) {
+    if (pos >= 0 && pos < cnt) {
+      for (i = pos + 1; i < cnt; i++) {
+        ads[i - 1] = ads[i];
+      }
+      ads[--cnt] = null;
+      showAds();
+    }
+  }
+  function add() {
+    if (cnt < MAX_ADS) {
+      var href = document.getElementById('new_href').value;
+      var img_src = document.getElementById('new_img_src').value;
+      if (href == "" || img_src == "") {
+        alert("目标链接及图片路径都不允许为空");
+      } else {
+        ads[cnt++] = new Ads(href, img_src);
+      }
+      showAds();
+    } else {
+      alert('已经达到允许的广告数上限，请联系系统维护员');
+    }
+  }
+  function confirm() {
+    var hrefs = '';
+    var img_srcs = '';
+    for (i = 0; i < cnt; i++) {
+      hrefs += ads[i].href + ';';
+      img_srcs += ads[i].img_src + ';';
+    }
+    document.getElementById('hrefs').value = hrefs;
+    document.getElementById('img_srcs').value = img_srcs;
+    document.getElementById('form1').submit();
+  }
+  function showAds() {
+    var html = '';
+    html += '<table>';
+    html += '<tr><td>预览</td><td>目标链接</td><td>图片的链接</td><td>操作</td></tr>';
+    for (i = 0; i < cnt; i++) {
+      html += '<tr>';
+      html += '<td><a href="' + ads[i].href + '" target="_blank"><img src="' + ads[i].img_src + '"/></a></td>';
+      html += '<td><input value="' + ads[i].href + '"/></td>';
+      html += '<td><input value="' + ads[i].img_src + '"/></td>';
+      html += '<td>';
+      html += '<input type="button" onclick="shift(' + i + ',-1)" value="上移"/>';
+      html += '<input type="button" onclick="shift(' + i + ',1)" value="下移"/>';
+      html += '<input type="button" onclick="del(' + i + ')" value="删除"/>';
+      html += '</td>';
+      html += '</tr>';
+    }
+    html += '<tr><td></td>';
+    html += '<td><input id="new_href" value="输入目标链接.." onmouseover="this.select()"/></td>';
+    html += '<td><input id="new_img_src" value="输入图片的链接.." onmouseover="this.select()"/></td>';
+    html += '<td><input type="button" onclick="add()" value="增加"/></td></tr>';
+    html += '</table>';
+    html += '<div style="float:right">请确认无误后再点击提交按钮<input type="button" onclick="confirm()" value="提交"/></div>';
+
+    document.getElementById('div_ads').innerHTML = html;
+  }
+</script>
+</head>
+
+<body>
+<form name="form1" id="form1" method="post" action="bbsadsupdate">
+<input type="hidden" id="hrefs" name="hrefs"/>
+<input type="hidden" id="img_srcs" name="img_srcs"/>
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle" width="11" height="14"/><a href="bbssec">{BBSNAME}</a></p>
+		<p><img src="images/location03.gif" alt="" align="absmiddle" width="37" height="14" />广告管理</p>
+  </div>
+</div>
+<table class="table" border="0" cellspacing="0" cellpadding="0">
+  <tr class="tb_head"> 
+    <td colspan="2" class="tb_head"><img src="images/table_ul06.gif" alt="" width="37" height="25" align="absmiddle" class="tb_ul" style="float:left" /> 
+        <div style="margin-top:8px">广告管理</div></td>
+    <td width="19" align="right" valign="top" class="tb_r"><img src="images/table_ur.gif" alt=""/></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div id="div_ads"><script type="text/javascript" lang="javascript">showAds();</script></div></td>
+  </tr>
+  <tr class="tb_bottom"> 
+    <td width="25"><img src="images/table_bl.gif" alt=""/></td>
+    <td width="1063"></td>
+    <td align="right"><img src="images/table_br.gif" alt=""/></td>
+  </tr>
+</table>
+
+<div id="footer">	
+</div>
+
+</form>
+</body>
+</html>

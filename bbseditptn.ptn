@@ -1,0 +1,12 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+</head>
+<form action=bbsmodptn method=post>
+<textarea name=source rows=20 cols=80 wrap=physicle>
+<!-- SHOWFILE PATTERN -->
+</textarea><br>
+<input type=hidden name=fname value={PTNAME}>
+<input type=submit value=修改>
+</form>
+</html>

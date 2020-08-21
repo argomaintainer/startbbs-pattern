@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中山大学逸仙时空BBS</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style>
+  body{
+      margin-right:16px;
+  }
+</style>
+</head>
+
+<body>
+<form name="form1" method="get" action="bbsdoc">
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href=bbssec>{BBSNAME}</a></p>
+    <p><img src="images/location02.gif" alt="" align="absmiddle" /><a href=bbsboa?board={SECNUM}>{SECNAME}</a></p>
+    <p><img src="images/location03.gif" alt="" align="absmiddle" /><a href=bbsdoc?board={BOARD}>{BOARDNAME}</a></p>
+  </div>
+</div>
+<div id="board_manager">
+版主: {BMLIST}
+</div>
+<table class="table" border="0" cellspacing="0" cellpadding="0">
+  <tr class="tb_head2"> 
+    <td><img src="images/table_ul.gif" width="8" height="8" /></td>
+    <td align="right"><img src="images/table_ur2.gif" width="8" height="8" /></td>
+  </tr>
+  <tr class="tb_head3"> 
+    <td height="29" class="tb_head_left">
+    <a href=bbspst?board={BOARD}><img src="images/add_topic.gif" alt="撰写话题" border="0"/></a>
+    <a href=bbsbfind?board={BOARD}><img src="images/search2.gif" alt="版内查询" border="0"/></a>
+<!-- IF HASVOTE -->
+    <a href=bbsvotedoc?board={BOARD}><img src="images/vote.gif" border="0" alt="参加投票"/></a>
+<!-- ENDIF -->
+</td>
+<td class="tb_head_right">
+<a href=bbs0an?path=boards/{BOARD}><B>精华</B></a> 
+           | <a href=bbsgdoc?board={BOARD}>文摘</a>
+           | <a href=bbstdoc?board={BOARD}><font style='color:#f00000'>主题</font></a> 
+           | <a href=bbsnot?board={BOARD}>备忘</a>
+ 	   <!-- IF LOGINOK -->
+	   | <a href=bbsbrdadd?board={BOARD}>预定</a>
+	   <!-- ENDIF -->
+	   <!-- IF HAS_BM_PERM -->
+	   | <a href=bbsmdoc?board={BOARD}>管理</a>
+	   <!-- ENDIF -->
+        <a href="rss/{BOARD}.xml"><img src="images/rss.gif" alt="RSS" align="absmiddle" border="0" /></a>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2">
+
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0" height="">
+        <tr> 
+          <td width="18"><img src="images/table-left2.gif" alt="" align="absmiddle" /></td>
+          <td class="td2" width="38">序号</td>
+          <td class="td2" width="33">状态</td>
+          <td class="td2">主题</td>
+          <td width="92" class="td2">作者</td>
+          <td width="113" align="right" class="td2"> <div style="float:left;padding-top:7px;">最后更新</div>
+            <img src="images/table_right2.gif" alt="" align="absmiddle" /></td>
+        </tr>
+<!-- BEGIN row -->
+        <tr> 
+          <td colspan="2" class="td5">{INDEX}</td>
+          <td align="center" class="td6">{FLAG}</td>
+          <td class="td6">{TITLE}{WORDCOUNT}</td>
+          <td class="td6"><a href="bbsqry?userid={AUTHOR}">{AUTHOR}</a> </td>
+          <td class="td7">{DATE}</td>
+        </tr>
+<!-- END row -->
+        <tr> 
+          <td colspan="5" class="tb_head_left"><a href="bbsclear?board={BOARD}&start={START}"><img src="images/clearflag.gif" border="0"/></a></td>
+          <td class="tb_head_right">&nbsp; </td>
+        </tr>
+      </table>
+
+	</td>
+  </tr>
+  <tr> 
+    <td class="tb_bottom"><img src="images/table_bl.gif" alt=""/></td>
+	<td  class="tb_bottom" align="right"><img src="images/table_br.gif" alt="" /></td>
+  </tr>
+</table>
+
+  <div id="footer"> 
+    <p>
+    {PGBUTTONUP}
+		{PGBUTTONDN}
+    转到第 
+      <input name="start" type="text" align="absmiddle" />
+      <input name="board" type="hidden" value="{BOARD}" />
+      项
+      <input name="Submit" type="submit" class="button" value="GO" />
+    </p>
+    <ul>
+      <li>页次: <b>{PAGE}</b>/<b>{PGTOTAL}</b>页</li>
+      <li>每页: <b>{PERPAGE}</b> </li>
+      <li>总数: <b>{TOTAL}</b> </li>
+    </ul>
+  </div>
+</form>
+</body>
+</html>

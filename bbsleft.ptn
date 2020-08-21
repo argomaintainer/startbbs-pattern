@@ -1,0 +1,145 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{BBSNAME}</title>
+<link href="templates/toolbar.css" rel="stylesheet" type="text/css" />
+<script>
+function closebut(x, y) 
+{	if(document.img0) document.img0.src='images/folder.gif';
+	if(document.img1) document.img1.src='images/folder.gif';
+	if(document.img2) document.img2.src='images/folder.gif';	
+	if(document.img3) document.img3.src='images/folder.gif';	
+	if(document.img4) document.img4.src='images/folder.gif';	
+	if(document.img5) document.img5.src='images/folder.gif';
+	if(document.getElementById('div0')) document.getElementById('div0').style.display='none';
+	if(document.getElementById('div1')) document.getElementById('div1').style.display='none';
+	if(document.getElementById('div2')) document.getElementById('div2').style.display='none';
+	if(document.getElementById('div3')) document.getElementById('div3').style.display='none';
+	if(document.getElementById('div4')) document.getElementById('div4').style.display='none';
+	if(document.getElementById('div5')) document.getElementById('div5').style.display='none';	
+	x.style.display='block';	
+	y.src='images/folder2.gif';
+	}
+function t(x, y)
+ {	if(x.style.display!='none') 
+   { x.style.display='none';		
+     y.src='images/folder.gif';	
+    }	
+   else	 closebut(x, y);
+ }
+ 
+ function openchat() 
+ {	url='bbschat';
+    chatWidth=screen.availWidth;	
+	chatHeight=screen.availHeight;	
+	winPara='toolbar=no,location=no,status=no,menubar=no,scrollbars=auto,resizable=yes,left=0,top=0,'+'width='+(chatWidth-10)+',height='+(chatHeight-27);	
+	window.open(url,'_blank',winPara);
+  }
+</script>
+</head>
+
+<body>
+<h1 id="h1_toolbar">BBS工具栏</h1>
+<div id="login">
+		<p>用户: {USER}</p>
+  	<p>级别: {LEVEL}</p>
+  	<p><a href="bbslogout?quick=1" target="f3"><img src="images/logout.gif" alt="注销" /></a></p>
+</div>
+
+<div id="list"> 
+  <p><img src="images/tb01.gif" align="absmiddle" /><a target="f3" href="bbsall">全部讨论区</a></p>
+  <p><img src="images/tb02.gif" align="absmiddle" /><a target="f3" href="bbs0an">精华公布栏</a></p>
+  <p><img src="images/tb03.gif" align="absmiddle" /><a target="f3" href="bbs0an?path=/personal">个人文集区</a></p>
+  <p><img src="images/tb04.gif" align="absmiddle" /><a target="f3" href="bbstop10">今日十大</a></p>
+  <p><img src="images/tb05.gif" align="absmiddle" /><a target="f3" href="bbstopb10">热门讨论区</a></p>
+  <p><img src="images/tb05.gif" align="absmiddle" /><a target="f3" href="bbsgood">推荐版面</a></p>
+  	<p><img src="images/folder.gif" align="absmiddle" name="img0"/><a href='javascript: t(document.getElementById("div0"), document.img0)'>预定讨论区</a></p>
+  	<div id="div0" style="display:none">
+  	<!-- BEGIN mainform -->
+  			<p class="sub"><img src="images/folder3.gif" align="absmiddle" border="0"/>{BOARD}</p>
+  	<!-- END mainform -->
+  	<img src="images/folder_end.gif" align="absmiddle" /><a target="f3" href="bbsmybrd">预定管理</a>
+  	</div>
+  	<p></p>
+
+  <p><img src="images/folder.gif" align="absmiddle" name="img1" /><a href='javascript: t(document.getElementById("div1"), document.img1)'>分类讨论区</a>
+  </p>
+  <div id="div1" style="display:none">
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=0">BBS系统</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=1">校园社团</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=2">院系交流</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=3">电脑科技</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=4">休闲娱乐</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=5">文化艺术</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=6">学术科学</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=7">谈天说地</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=8">社会信息</a></p>
+  <p><img src="images/folder_end.gif" align="absmiddle" /><a target="f3" href="bbsboa?board=9">体育健身</a></p></div> <p></p>
+ 
+  <p><img src="images/folder.gif" align="absmiddle" name="img2" /><a href='javascript: t(document.getElementById("div2"), document.img2)'>聊天选单</a>
+  </p><div id="div2" style="display:none"><p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsfriend">在线好友</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsusr">环顾四方</a></p>
+  <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsqry">查询网友</a></p>
+    <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbssendmsg">发送讯息</a></p>
+    <p><img src="images/folder_end.gif" align="absmiddle" /><a target="f3" href="bbsmsg">查看所有讯息</a></p>
+  </div><p></p>
+    
+  <p><img src="images/folder.gif" align="absmiddle" name="img3"/><a href='javascript: t(document.getElementById("div3"), document.img3)'>个人工具箱</a></p>
+  <div id="div3" style="display:none">
+<!-- IF HAS_NO_AUTH -->
+    <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsauth"><font color="#ff0000">激活帐号</font></a></p>
+<!-- ENDIF -->
+  	<p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsinfo">个人资料</a></p>
+  	<p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsplan">改说明档</a></p>
+  	<p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbssig">改签名档</a></p>
+  	<p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbspwd">修改密码</a></p>
+ 	<p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsparm">修改个人参数</a></p>
+  	<p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsmywww">WWW参数</a></p>
+  	<p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsnick">临时改昵称</a></p>
+<!-- IF CAN_CLOAK -->
+	<p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbscloak">切换隐身</a></p>
+<!-- ENDIF -->
+  	<p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsfall">设定好友</a></p>
+  	<p><img src="images/folder_end.gif" align="absmiddle" /><a target="f3" href="bbsball">设定坏人</a></p>
+  </div>
+  <p></p>
+
+<!-- IF IS_ADMIN -->
+        <p><img src="images/folder.gif" align="absmiddle" name="img3"/><a href='javascript: t(document.getElementById("div9"), document.img3)'><font color="#0000ff">管理员工具</font></a></p>
+<div id="div9" style="display:none">
+        <p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a target="f3" href="bbsannstat_m">精华区操作统计</a></p>
+        <p class="sub"><img src="images/folder_end.gif" align="absmiddle" /><a target="f3" href="bbsadsmanagement">广告管理</a></p>
+</div>
+  <p></p>
+<!-- ENDIF -->
+
+  <p><img src="images/folder.gif" align="absmiddle" name="img4"/><a href='javascript: t(document.getElementById("div4"), document.img4)'>处理信件区</a></p>
+  <div id="div4" style="display:none">
+  	<p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a href="bbsnewmail" target="f3">阅览新邮件</a></p>
+  	<p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a href="bbsmail" target="f3">所有邮件</a></p>
+  	<p><img src="images/folder_end.gif" align="absmiddle" /><a href="bbspstmail" target="f3">发送邮件</a></p>
+  </div>
+  <p></p>
+  
+  <p><img src="images/folder.gif" align="absmiddle" name="img5"/><a href='javascript: t(document.getElementById("div5"), document.img5)'>特别服务区</a></p>
+  <div id="div5" style="display:none">
+  	<p class="sub"><img src="images/folder3.gif" align="absmiddle" /><a href="bbsalluser" target="f3">所有使用者</a></p>
+  	<p><img src="images/folder_end.gif" align="absmiddle" /><a href="bbsnotepad"  target="f3">查看留言版</a></p>
+  </div>
+  <p></p>
+  <p><img src="images/tb06.gif" align="absmiddle" /><a href="http://argo.sysu.edu.cn:874/frgg/" target="f3">文章查询</a></p>
+  <p><img src="images/tb06.gif" align="absmiddle" /><a href="bbssel" target="f3">查找讨论区</a></p>
+  <p><img src="images/tb06.gif" align="absmiddle" /><a href="bbsannsearch" target="f3">精华区搜索</a></p>
+  <p><img src="images/tb07.gif" align="absmiddle" /><a href="bbspstmail?userid=monson" target="f3"><font color="#0000ff">寄信给管理员</font></a>
+  </p>
+  <p><img src="images/tb07.gif" align="absmiddle" /><a href="telnet://bbs.sysu.edu.cn/">Telnet登录</a></p>
+  <p><img src="images/tb08.gif" align="absmiddle" /><a href="bbsgohome" target="_top">返回首页</a></p>
+<!--
+<br/>
+<br/>
+<p>赞助商链接:</p>
+<p>&nbsp;&nbsp;<font size="-1"><a href="ad/sina2.htm" target="_blank">新浪hi 80一代</a></font></p>
+-->
+</div>
+</body>
+</html>

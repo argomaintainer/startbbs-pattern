@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中山大学逸仙时空BBS</title>
+<link href="templates/global.css" rel="stylesheet" type="text/css" />
+<style>
+  body{
+      margin-right:16px;
+  }
+</style>
+</head>
+
+<body>
+<form name="form1" method="get" action="bbsdoc">
+<div id="head">
+  <div id="location">
+    <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href=bbssec>【{BBSNAME}】</a></p>
+    <p><img src="images/location02.gif" alt="" align="absmiddle" /> <a href=bbsboa?board={SECNUM}>【{SECNAME}】</a></p>
+	<p><img src="images/location03.gif" alt="" align="absmiddle" /> <font color=ff0000>【{BOARDNAME}】</font>
+</p>
+  </div>
+</div>
+<table class="table" border="0" cellspacing="0" cellpadding="0">
+  <tr class="tb_head2"> 
+    <td><img src="images/table_ul.gif" width="8" height="8" /></td>
+    <td align="right"><img src="images/table_ur2.gif" width="8" height="8" /></td>
+  </tr>
+  <tr class="tb_head3"> 
+    <td height="15" class="tb_head_left">
+    <td class="tb_head_right">
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2">
+
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0" height="">
+        <tr> 
+          <td width="18"><img src="images/table-left2.gif" alt="" align="absmiddle" /></td>
+          <td class="td2" width="38">编号</td>
+          <td class="td2" width="33">标记</td>
+          <td class="td2">主题</td>
+          <td width="92" class="td2">作者</td>
+          <td width="113" align="right" class="td2"> <div style="float:left;padding-top:7px;">最后更新</div>
+            <img src="images/table_right2.gif" alt="" align="absmiddle" /></td>
+        </tr>
+<!-- BEGIN row -->
+        <tr> 
+          <td colspan="2" class="td5">{INDEX}</td>
+          <td align="center" class="td6">{FLAG}</td>
+          <td class="td6">
+	  <a href={URL}>{TITLE}</a>
+	  {WORDCOUNT}</td>
+          <td class="td6"><a href=bbsqry?userid={AUTHOR}>{AUTHOR}</a> </td>
+          <td class="td7">{DATE}</td>
+        </tr>
+<!-- END row -->
+        <tr> 
+          <td colspan="5" class="tb_head_left">&nbsp;</td>
+          <td class="tb_head_right">&nbsp;</td>
+        </tr>
+      </table>
+
+	</td>
+  </tr>
+  <tr> 
+    <td class="tb_bottom"> <img src="images/table_bl.gif" alt=""/></td>
+	<td  class="tb_bottom" align="right"><img src="images/table_br.gif" alt="" /></td>
+  </tr>
+</table>
+
+  <div id="footer"> 
+    <p>
+以上是讨论区{BOARDNAME}内, 标题含{KEYWORD}, 作者为{AUTHOR}, {DAY}天以内的所有文章. 共找到{COUNT}篇文章符合条件
+     <br>{PGBUTTONUP}
+		{PGBUTTONDN}
+    </p>
+    <ul>
+      <li>页次: <b>{PAGE}</b>/<b>{PGTOTAL}</b>页</li>
+      <li>每页: <b>{PERPAGE}</b> </li>
+      <li>总数: <b>{TOTAL}</b> </li>
+    </ul>
+  </div>
+</form>
+</body>
+</html>
