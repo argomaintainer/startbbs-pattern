@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>{TITLE} - 逸仙时空BBS</title>
+<title>{TITLE} - {BBSNAME}电子公告板系统（BBS）</title>
 <link href="templates/global.css" rel="stylesheet" type="text/css">
 <style>
   body{

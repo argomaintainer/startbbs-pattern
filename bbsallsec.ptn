@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>中山大学逸仙时空BBS</title>
+<title>{BBSNAME}电子公告板系统（BBS）</title>
 <link href="css/global.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -16,7 +16,7 @@
     <td id="center">
 	<table border="0" cellspacing="0" cellpadding="0" id="boards">
       <tr> 
-        <td colspan="7" class="tb_head"><img src="images/table_ul02.gif" alt="" style="float:left" class="tb_ul" /><div class="title">分类讨论区</div></td>
+        <td colspan="7" class="tb_head"><img src="images/table_ul02.gif" alt="" style="float:left" class="tb_ul" /><div class="title">讨论区地图</div></td>
         <td width="19" align="right" valign="top" class="tb_r"><img src="images/table_ur.gif" alt=""/></td>
       </tr>
       <tr> 

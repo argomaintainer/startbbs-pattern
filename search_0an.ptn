@@ -15,13 +15,13 @@
 <div id="head">
   <div id="location">
     <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href="bbssec">{BBSNAME}</a></p>
-    <p><img src="images/location03.gif" alt="" align="absmiddle"/>精华区搜索</p>
+    <p><img src="images/location03.gif" alt="" align="absmiddle"/>搜索精华区</p>
   </div>
 </div>
   <table border="0" cellpadding="0" cellspacing="0" class="table">
     <tr> 
       <td colspan="2" class="tb_head"><img src="images/table_ul01.gif" alt="" align="absmiddle" class="tb_ul" style="float:left" /> 
-        <div style="margin-top:8px">精华区搜索</div></td>
+        <div style="margin-top:8px">搜索精华区</div></td>
       <td width="19" align="right" valign="top" class="tb_r"><img src="images/table_ur.gif" alt=""/></td>
     </tr>
     <tr> 

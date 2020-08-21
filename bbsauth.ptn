@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>中山大学逸仙时空BBS</title>
+<title>{BBSNAME}电子公告板系统（BBS）</title>
 <link href="templates/global.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
   body{
@@ -15,7 +15,7 @@
 <form name="form1" method="post" action="bbsauth?type=4">
 <div id="head">
   <div id="location">
-    <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href="bbsallsec">逸仙时空 Yat-Sen Channel</a></p>
+    <p><img src="images/location01.gif" alt="" align="absmiddle"/><a href="bbsallsec">{BBSNAME}电子公告板系统（BBS）</a></p>
 		<p><img src="images/location03.gif" alt="" align="absmiddle"/>激活用户</p>
   </div>
 </div>
