@@ -66,5 +66,17 @@
     </p>
   </div>
 </form>
+<script>
+if(window.top == window){
+var foot = document.createElement('iframe')
+foot.src='bbsfoot'
+document.body.append(foot)
+foot.style.bottom = '0px';
+foot.style.position = 'fixed';
+foot.style.height='24px';
+foot.style.width='100%';
+foot.scrolling = 'no';
+}
+</script>
 </body>
 </html>

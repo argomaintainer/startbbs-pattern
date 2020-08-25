@@ -28,11 +28,46 @@ a{ color:#666;}
 <ul>
   <li>时间: [{TIME}]</li>
   <li>在线: [{ONLINE}]</li>
-  <li>帐号: [{USER}]</li>
+  <li>帐号: [<span id="userid">{USER}</span>]</li>
   <li>信箱: [{MAIL}]</li>
   <li>已停留: [{STAY}]</li>
-
+  <li id="pageurl"></li>
+  <li id="reglink"></li>
 </ul>
+
+<script>
+function openreg(){
+window.open('bbsreg', '__top');
+}
+function openlogin(){
+window.open('/', '__top');
+}
+var userid = document.getElementById('userid').innerText;
+if(userid == 'guest'){
+var reglink = document.getElementById('reglink');
+reglink.innerHTML = '<input class="inputbtn" type="button" value="登陆" onclick="javascript: openlogin();">&nbsp;<input class="inputbtn" type="button" value="注册" onclick="javascript: openreg();">';
+}
+function unjmppage(e){
+alert('可右键复制该话题的地址或新标签页中打开');
+e = e || window.event;
+e.preventDefault ? e.preventDefault() : e.returnValue = false;
+}
+if(window.top != window){
+var pagelink = window.parent.location.pathname;
+var pagelink2 = window.parent.location.href;
+if( pagelink != '/bbscon'){
+var pageframe = window.top.frames['f3'];
+if(pageframe){
+pagelink = pageframe.location.pathname;
+pagelink2 = pageframe.location.href;
+}
+}
+if( pagelink  == '/bbscon'){
+var pdom = document.getElementById('pageurl');
+pdom.innerHTML = '<a onclick="javascript: unjmppage() " href="' + pagelink2 + '">[话题地址]</a>';
+}
+}
+</script>
  
 </body>
 </html>
